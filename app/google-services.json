@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "278078744157",
+    "firebase_url": "https://ares-liqour-shop-5b5ed-default-rtdb.firebaseio.com",
+    "project_id": "ares-liqour-shop-5b5ed",
+    "storage_bucket": "ares-liqour-shop-5b5ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278078744157:android:4ed3665ac7743c8e064fb4",
+        "android_client_info": {
+          "package_name": "com.example.aresliqourshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278078744157-r9rv6l2iu47r23u8s05gdvf5pk3h38nd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCud3C1MDlRq7Cq2sWhRRD5QHCSY8apIw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "278078744157-r9rv6l2iu47r23u8s05gdvf5pk3h38nd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
