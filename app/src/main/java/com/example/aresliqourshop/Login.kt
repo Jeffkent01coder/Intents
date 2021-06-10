@@ -1,30 +1,36 @@
 package com.example.aresliqourshop
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-
+import androidx.appcompat.app.AppCompatActivity
+import com.example.aresliqourshop.databinding.ActivityLoginBinding
 
 class Login : AppCompatActivity() {
+    private var binding: ActivityLoginBinding? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding!!.root)
 
-        val loginBtn = findViewById<Button>(R.id.btnLogin)
-        val signBtn = findViewById<TextView>(R.id.tvLogin)
-
-        loginBtn.setOnClickListener {
-            val intent = Intent(this, DAshbord::class.java)
-            startActivity(intent)
+        binding?.btnLogin?.setOnClickListener {
+            val inputs = arrayOf(binding?.usernameLogin, binding?.passwordLogin)
+            var filled = true
+            inputs.forEach { input ->
+                filled = filled && input!!.text!!.isNotEmpty()
+                if (!filled){
+                    input?.error = "required"
+                }
+            }.also {
+                if (filled){
+                    // Authenticate with firebase later
+                    startActivity(Intent(this, DAshbord::class.java))
+                }
+            }
         }
 
-        signBtn.setOnClickListener {
-            val intent = Intent(this, Register::class.java)
-            startActivity(intent)
+        binding?.tvLogin?.setOnClickListener {
+            startActivity(Intent(this, Register::class.java))
         }
-
-
     }
 }
