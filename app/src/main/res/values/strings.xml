@@ -11,4 +11,9 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="ares_liqour_shop">Ares_liqour_shop</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="login">LogIn</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="image">image</string>
 </resources>

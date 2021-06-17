@@ -33,41 +33,46 @@ class Register : AppCompatActivity() {
         }
         registerBtn.setOnClickListener {
 
-            if (TextUtils.isEmpty(usernameLogin.text.toString())) {
-                usernameLogin.setError("Please enter username")
-                return@setOnClickListener
-            } else if(TextUtils.isEmpty(passwordLogin.text.toString())){
-                passwordLogin.setError("Please enter Email")
-                return@setOnClickListener
-            }
-            else if(TextUtils.isEmpty(inputNumber.text.toString())){
-                inputNumber.setError("Please enter Phone number")
-                return@setOnClickListener
-            }
-            else if(TextUtils.isEmpty(inputPassword.text.toString())){
-                inputPassword.setError("Please enter password")
-                return@setOnClickListener
-            }
-            else if(TextUtils.isEmpty(inputConfirmPass.text.toString())){
-                inputConfirmPass.setError("Please enter confirm password")
-                return@setOnClickListener
-            }
-
-            if (inputPassword.text.toString()!= inputConfirmPass.text.toString()){
-                inputConfirmPass.setError("passwords do not match")
-                return@setOnClickListener
-            }
-
-            auth.createUserWithEmailAndPassword(passwordLogin.text.toString(), inputPassword.text.toString())
-                .addOnCompleteListener {
-                    if (it.isSuccessful){
-                        val currentuser = auth.currentUser
-                    }
+            when {
+                TextUtils.isEmpty(usernameLogin.text.toString()) -> {
+                    usernameLogin.error = "Please enter username"
+                    return@setOnClickListener
                 }
+                TextUtils.isEmpty(passwordLogin.text.toString()) -> {
+                    passwordLogin.error = "Please enter Email"
+                    return@setOnClickListener
+                }
+                TextUtils.isEmpty(inputNumber.text.toString()) -> {
+                    inputNumber.error = "Please enter Phone number"
+                    return@setOnClickListener
+                }
+                TextUtils.isEmpty(inputPassword.text.toString()) -> {
+                    inputPassword.error = "Please enter password"
+                    return@setOnClickListener
+                }
+                TextUtils.isEmpty(inputConfirmPass.text.toString()) -> {
+                    inputConfirmPass.error = "Please enter confirm password"
+                    return@setOnClickListener
+                }
+                inputPassword.text.toString()!= inputConfirmPass.text.toString() -> {
+                    inputConfirmPass.error = "passwords do not match"
+                    return@setOnClickListener
+                }
+                else -> {
+                    auth.createUserWithEmailAndPassword(
+                        passwordLogin.text.toString(),
+                        inputPassword.text.toString()
+                    )
+                        .addOnCompleteListener {
+                            if (it.isSuccessful) {
+                                val currentuser = auth.currentUser
+                            }
+                        }
 
-
-            val intent = Intent(this, Login::class.java)
-            startActivity(intent)
+                    val intent = Intent(this, Login::class.java)
+                    startActivity(intent)
+                }
+            }
         }
     }
 }
