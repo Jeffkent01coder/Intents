@@ -11,8 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AresLiqourShop">
+        <activity android:name=".about"></activity>
+        <activity android:name=".settings" />
+        <activity android:name=".cart" />
+        <activity android:name=".energy" />
+        <activity android:name=".beer" />
+        <activity android:name=".soda" />
+        <activity android:name=".wines" />
+        <activity android:name=".Alcohol" />
         <activity android:name=".DAshbord" />
-        <activity android:name=".Login" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait" />
         <activity android:name=".Register" />
         <activity android:name=".MainActivity">
             <intent-filter>

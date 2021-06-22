@@ -30,6 +30,7 @@
         >
     
     <androidx.cardview.widget.CardView
+        android:id="@+id/alcohol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_row="0"
@@ -56,7 +57,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="COCA_COLA"
+                android:text="ALCOHOLS"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textAlignment="center"
@@ -65,6 +66,7 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:id="@+id/wines"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -91,7 +93,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PANTHER"
+                    android:text="WINES"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textAlignment="center"
@@ -100,6 +102,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:id="@+id/beer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -126,7 +129,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="MONSTER"
+                    android:text="BEER"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textAlignment="center"
@@ -135,6 +138,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:id="@+id/soda"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -161,7 +165,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="BRAVADO"
+                    android:text="SODA"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textAlignment="center"
@@ -170,6 +174,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:id="@+id/energy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="2"
@@ -196,7 +201,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="COCA COLA"
+                    android:text="ENERGY"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textAlignment="center"
@@ -231,7 +236,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="JUICE WORLD"
+                    android:text="CART"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textAlignment="center"
@@ -240,6 +245,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:id="@+id/cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="2"
@@ -266,7 +272,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mekins"
+                    android:text="CART"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textAlignment="center"
@@ -275,6 +281,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:id="@+id/settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="3"
@@ -301,7 +308,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="GENERAL MEKINS"
+                    android:text="SETTINGS"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textAlignment="center"
@@ -310,6 +317,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:id="@+id/about"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="3"
@@ -336,7 +344,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="JUICE COLA"
+                    android:text="ABOUT"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textAlignment="center"
